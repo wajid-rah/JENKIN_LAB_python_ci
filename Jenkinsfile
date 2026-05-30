@@ -1,5 +1,10 @@
 pipeline {
-  agent any
+   agent {
+    docker {
+      image 'python:3.11'        // use official Python image
+      args '--user root'
+    }
+  }
 
   stages {
     stage('Install') {
