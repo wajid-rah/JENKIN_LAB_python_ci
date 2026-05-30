@@ -12,7 +12,7 @@ pipeline {
     stage('Test') {
       steps {
         echo 'Running tests...'
-        sh 'pytest test_calculator.py --junitxml=results.xml -v'
+        sh 'python3 -m pytest test_calculator.py --junitxml=results.xml -v'
       }
     }
   }
